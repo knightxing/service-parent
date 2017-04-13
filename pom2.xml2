@@ -11,7 +11,6 @@
 	<modules>
 		<module>gateway</module>
 		<module>service1</module>
-		<module>service2</module>
 	</modules>
 
 </project>
