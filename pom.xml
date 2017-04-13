@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>user-parent</name>
+	<url>http://maven.apache.org</url>
+
+	<groupId>com.company.user</groupId>
+	<artifactId>user-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<!-- 实现聚合 -->
+	<modules>
+		<module>../user-core</module>
+		<module>../user-dao</module>
+		<module>../user-log</module>
+		<module>../user-service</module>
+	</modules>
+
+
+
+</project>
