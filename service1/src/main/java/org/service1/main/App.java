@@ -1,4 +1,4 @@
-package org.service1;
+package org.service1.main;
 
 import java.io.IOException;
 
