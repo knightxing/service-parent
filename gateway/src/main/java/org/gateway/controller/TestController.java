@@ -1,11 +1,20 @@
 package org.gateway.controller;
 
+import org.common.core.exception.BusinessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * 
+ * 
+ * <p>LoggingAspect </p>
+ * <p>描述: </p>
+ *   @author Sean.Chan
+ *   @date 2017年4月15日下午10:58:15
+ */
 @Controller
 @RequestMapping("/test")
 public class TestController {
@@ -20,17 +29,18 @@ public class TestController {
 
 	@RequestMapping("/hello/{content}")
 	@ResponseBody
-	public String hello(@PathVariable String content) {
+	public String hello(@PathVariable String content) throws BusinessException{
 		Assert.notNull(content);
-		//String result = testService1.sayHello(content); // ִ
-		//return result;
+		if(content.equals("aa")){
+			throw new BusinessException("aaaaa");
+		}
 		return content;
 	}
 
-//	@RequestMapping("/showmoney")
-//	@ResponseBody
-//	public double showmoney() {
-//		return testService2.showMoney();
-//	}
+	@RequestMapping("/show")
+	@ResponseBody
+	public double showmoney() {
+		return 0;
+	}
 
 }

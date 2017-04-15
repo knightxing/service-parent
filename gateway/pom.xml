@@ -4,11 +4,11 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 
-<!-- 	<parent> -->
-<!-- 		<groupId>com.company.service</groupId> -->
-<!-- 		<artifactId>service-parent</artifactId> -->
-<!-- 		<version>0.0.1-SNAPSHOT</version> -->
-<!-- 	</parent> -->
+	<!-- <parent> -->
+	<!-- <groupId>com.company.service</groupId> -->
+	<!-- <artifactId>service-parent</artifactId> -->
+	<!-- <version>0.0.1-SNAPSHOT</version> -->
+	<!-- </parent> -->
 
 	<groupId>com.company.service</groupId>
 	<artifactId>gateway</artifactId>
@@ -33,6 +33,38 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<!-- 添加dubbo -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.5.3</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- 添加zookeeper -->
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.company.service</groupId>
+			<artifactId>common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<!-- Package as an executable jar -->
@@ -44,6 +76,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	
+
+
 </project>

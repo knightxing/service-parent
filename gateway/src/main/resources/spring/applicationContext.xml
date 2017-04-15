@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"     
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
+    xmlns:p="http://www.springframework.org/schema/p"     
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:util="http://www.springframework.org/schema/util"  
+    xmlns:mvc="http://www.springframework.org/schema/mvc"   
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans     
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  
+    http://www.springframework.org/schema/context  
+    http://www.springframework.org/schema/context/spring-context-3.2.xsd  
+    http://www.springframework.org/schema/util   
+    http://www.springframework.org/schema/util/spring-util-3.1.xsd  
+    http://www.springframework.org/schema/mvc  
+    http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd  
+    http://code.alibabatech.com/schema/dubbo   
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">  
+   
+    <!-- dubbo使用注解 -->
+	<dubbo:annotation />
+    <dubbo:annotation package="org.gateway." /> 
+    <!-- MVC注解驱动 -->
+	<mvc:annotation-driven />
+    <!-- ①：对web包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->    
+    <context:component-scan base-package="org.gateway.,org.common." />   
+   
+   <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->  
+    <dubbo:application name="xing_consumer" />  
+  
+    <!-- 使用zookeeper注册中心暴露服务地址 -->  
+    <!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->  
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" />  
+      
+</beans>  
