@@ -1,11 +1,11 @@
 package org.gateway.controller;
 
 import org.common.core.exception.BusinessException;
-import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  *   @author Sean.Chan
  *   @date 2017年4月15日下午10:58:15
  */
-@Controller
+@RestController
 @RequestMapping("/test")
 public class TestController {
 
