@@ -65,6 +65,14 @@
 			<artifactId>common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		
+		
+		<dependency>
+			<groupId>com.company.service</groupId>
+			<artifactId>serviceinterface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 	</dependencies>
 
 	<!-- Package as an executable jar -->

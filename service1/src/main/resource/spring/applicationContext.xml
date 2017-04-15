@@ -23,7 +23,7 @@
     <!-- MVC注解驱动 -->
 	<mvc:annotation-driven />
     <!-- ①：对web包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->    
-    <context:component-scan base-package="org.service.,org.common." />   
+    <context:component-scan base-package="org.service1.,org.common." />   
    
    <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->  
     <dubbo:application name="xing_consumer" />  
