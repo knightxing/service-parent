@@ -17,13 +17,16 @@
     http://code.alibabatech.com/schema/dubbo   
     http://code.alibabatech.com/schema/dubbo/dubbo.xsd">  
    
-    <!-- dubbo使用注解 -->
-	<dubbo:annotation />
-    <dubbo:annotation package="org.gateway." /> 
-    <!-- MVC注解驱动 -->
+     <!-- MVC注解驱动 -->
 	<mvc:annotation-driven />
     <!-- ①：对web包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->    
     <context:component-scan base-package="org.gateway.,org.common.,org.service*." />   
+   
+    <!-- dubbo使用注解 -->
+	<dubbo:annotation />
+    <dubbo:annotation package="org.gateway." /> 
+    <context:component-scan base-package="org.gateway.,org.common.,org.service*." />   
+  
    
    <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->  
     <dubbo:application name="consumer" />  

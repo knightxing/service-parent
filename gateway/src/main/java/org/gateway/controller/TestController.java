@@ -27,7 +27,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 @RequestMapping("/test")
 public class TestController {
 
-	// @Autowired
+
 	@Reference
 	private ServiceTest testService1;
 	//
