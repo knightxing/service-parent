@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:org.gateway.main.GatewayApp</config>
+		<config>java:org.gateway.main.GatewayMain</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
