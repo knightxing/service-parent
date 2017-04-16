@@ -6,7 +6,7 @@ import org.service1.domain.User;
 
 public interface UserMapper {
 
-	@Insert("INSERT INTO tb_user(username, password) VALUES(#{username},#{password})")
+	@Insert("INSERT INTO tb_user(username,password) VALUES(#{username},#{password})")
 	public int insertUser(@Param("username") String username, @Param("password") String password);
 
 	/**
