@@ -60,18 +60,13 @@
 			<version>0.1</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.company.service</groupId>
-			<artifactId>common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.company.service</groupId> -->
+<!-- 			<artifactId>common</artifactId> -->
+<!-- 			<version>0.0.1-SNAPSHOT</version> -->
+<!-- 		</dependency> -->
 		
 		
-		<dependency>
-			<groupId>com.company.service</groupId>
-			<artifactId>serviceinterface</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		
 	</dependencies>
 
